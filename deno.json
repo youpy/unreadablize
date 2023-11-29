@@ -1,0 +1,23 @@
+{
+  "fmt": {
+    "semiColons": false,
+    "singleQuote": true
+  },
+  "lint": {
+    "rules": {
+      "tags": [
+        "recommended"
+      ]
+    }
+  },
+  "tasks": {
+    "build": "deno run -A bundle.ts",
+    "preview": "deno task build && deno run -A https://deno.land/std/http/file_server.ts dist"
+  },
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "deno.ns"
+    ]
+  }
+}
